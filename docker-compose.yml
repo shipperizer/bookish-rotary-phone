@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  rabbitmq-1:
+    image: rabbitmq:3-management
+    hostname: rabbit-1
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbit
+      - RABBITMQ_DEFAULT_PASS=rabbit
+    ports:
+      - 15672
+
+  # rabbitmq-2:
+  #   image: rabbitmq:3-management
+  #   hostname: rabbit-2
+  #   restart: always
+  #   environment:
+  #     - RABBITMQ_DEFAULT_USER=rabbit
+  #     - RABBITMQ_DEFAULT_PASS=rabbit
+  #   ports:
+  #     - 15672
+  #
+  # rabbitmq-3:
+  #   image: rabbitmq:3-management
+  #   hostname: rabbit-3
+  #   restart: always
+  #   environment:
+  #     - RABBITMQ_DEFAULT_USER=rabbit
+  #     - RABBITMQ_DEFAULT_PASS=rabbit
+  #   ports:
+  #     - 15672
+  #
